@@ -1,14 +1,21 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-const Layout = () => {
+import Editor from './components/Editor';
+import Header from './components/Header';
+import LeftMenu from './components/LeftMenu';
+
+const Main = () => {
     return (
         <>
         <Header />
-        <Main />
+        <div className='main'>
+            <LeftMenu />
+            <Editor />
+        </div>
         </>
     );
 }
 
 let app = document.getElementById('app');
-ReactDOM.render(<Layout/>, app);
+ReactDOM.render(<Main/>, app);

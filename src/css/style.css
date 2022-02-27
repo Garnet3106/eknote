@@ -1,3 +1,78 @@
+:root {
+    --editor-note-childen-width: calc(var(--editor-note-width) - 30px);
+    --editor-note-children-padding: .5em;
+    --editor-note-width: 300px;
+    --leftmenu-width: 250px;
+}
+
 body {
     margin: 0;
+}
+
+div.header {
+    background-color: aliceblue;
+    height: 40px;
+}
+
+div.main {
+    display: flex;
+}
+
+div.leftmenu {
+    display: flex;
+    flex-direction: column;
+    width: var(--leftmenu-width);
+}
+
+div.leftmenu-item {
+    height: 20px;
+    width: 80%;
+}
+
+div.editor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: calc(100% - var(--leftmenu-width));
+}
+
+div.editor-note {
+    align-items: center;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 0 10px;
+    width: var(--editor-note-width);
+}
+
+div.editor-note-title {
+    background-color: #ffffff;
+    border-radius: .5em;
+    --editor-note-title-height: 1.8em;
+    font-weight: bold;
+    height: var(--editor-note-title-height);
+    line-height: var(--editor-note-title-height);
+    margin-top: 10px;
+    outline: none;
+    overflow-x: scroll;
+    padding: 0 var(--editor-note-children-padding);
+    scrollbar-width: none;
+    white-space: nowrap;
+    width: calc(var(--editor-note-childen-width) - (var(--editor-note-children-padding) * 2));
+}
+
+div.editor-note-title::-webkit-scrollbar {
+    display: none;
+}
+
+div.editor-note-content {
+    background-color: #ffffff;
+    border-radius: .5em;
+    margin: 10px 0;
+    min-height: 200px;
+    outline: none;
+    padding: var(--editor-note-children-padding);
+    width: var(--editor-note-childen-width);
+    width: calc(var(--editor-note-childen-width) - (var(--editor-note-children-padding) * 2));
 }
