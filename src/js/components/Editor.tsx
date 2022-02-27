@@ -2,7 +2,7 @@ import React from 'react';
 
 import EditorNote from './EditorNote';
 
-const Component = () => {
+export default function Component() {
     return (
         <div className='editor'>
             <EditorNote/>
@@ -12,5 +12,3 @@ const Component = () => {
         </div>
     );
 }
-
-export default Component;

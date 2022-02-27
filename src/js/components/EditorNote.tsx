@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Component = (props) => {
+export default function Component(props: Object) {
     return (
         <div className='editor-note'>
             <div className='editor-note-title' contentEditable>
@@ -10,5 +10,3 @@ const Component = (props) => {
         </div>
     );
 }
-
-export default Component;
